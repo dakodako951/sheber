@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Шебер — мастера рядом</title>
+  <meta name="description" content="Найдите проверенного мастера для ремонта или разместите своё объявление." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="logo" href="#" aria-label="Шебер — главная"><img src="логитип/логотип.png" alt="" /><span class="logo-name" role="img" aria-label="Шебер"></span></a>
+    <nav>
+      <a href="#catalog">Все мастера</a>
+      <a href="#how">Как это работает</a>
+    </nav>
+    <div class="header-actions">
+      <button class="ghost-btn" id="favoritesBtn">♡ <span>Избранное</span></button>
+      <button class="primary-btn open-form">+ Подать объявление</button>
+      <button class="auth-btn" id="loginBtn">Войти</button>
+      <div class="account" id="accountBox" hidden><span class="account-avatar" id="accountAvatar"></span><strong id="accountName"></strong><button id="logoutBtn">Выйти</button></div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow">Более 1 200 мастеров уже с нами</div>
+        <h1>Найдите мастера,<br><em>которому доверяют</em></h1>
+        <p>Ремонт квартиры, техники или автомобиля — выберите специалиста по отзывам и договоритесь напрямую.</p>
+        <form class="search-box" id="searchForm">
+          <label><span>⌕</span><input id="searchInput" type="search" placeholder="Какая услуга вам нужна?" /></label>
+          <label class="city-field"><span>⌖</span><select id="citySelect"><option>Все города</option><option>Алматы</option><option>Астана</option><option>Шымкент</option><option>Караганда</option></select></label>
+          <button type="submit">Найти мастера</button>
+        </form>
+        <div class="popular">Часто ищут: <button data-query="сантехник">сантехник</button><button data-query="электрик">электрик</button><button data-query="ремонт под ключ">ремонт под ключ</button></div>
+      </div>
+      <div class="hero-visual">
+        <div class="shape"></div>
+        <img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&fit=crop&w=900&q=85" alt="Мастер за работой" />
+        <div class="trust-card"><div class="avatars"><span>АМ</span><span>ДК</span><span>СВ</span></div><div><strong>4.9 из 5</strong><small>средняя оценка мастеров</small></div></div>
+        <div class="verified-card">✓ Проверенные специалисты</div>
+      </div>
+    </section>
+
+    <section class="categories" aria-label="Категории услуг">
+      <button class="category active" data-category="Все"><i>⌂</i><span>Все услуги</span></button>
+      <button class="category" data-category="Ремонт квартир"><i>▱</i><span>Ремонт квартир</span></button>
+      <button class="category" data-category="Сантехника"><i>♨</i><span>Сантехника</span></button>
+      <button class="category" data-category="Электрика"><i>ϟ</i><span>Электрика</span></button>
+      <button class="category" data-category="Мебель"><i>▦</i><span>Мебель</span></button>
+      <button class="category" data-category="Техника"><i>⚙</i><span>Ремонт техники</span></button>
+      <button class="category" data-category="Авто"><i>◉</i><span>Авто</span></button>
+    </section>
+
+    <section class="catalog" id="catalog">
+      <div class="section-heading"><div><span class="kicker">СПЕЦИАЛИСТЫ РЯДОМ</span><h2>Популярные мастера</h2></div><div class="sort-wrap"><span id="resultCount"></span><select id="sortSelect"><option value="popular">Сначала популярные</option><option value="rating">По рейтингу</option><option value="price">Сначала дешевле</option></select></div></div>
+      <div class="cards" id="cards"></div>
+      <div class="empty" id="empty"><b>Ничего не найдено</b><p>Попробуйте изменить запрос или выбрать другую категорию.</p></div>
+      <nav class="pagination" id="pagination" aria-label="Страницы каталога"></nav>
+    </section>
+
+    <section class="how" id="how">
+      <div><span class="kicker">ПРОСТО И БЕЗОПАСНО</span><h2>От задачи до результата<br>за три шага</h2></div>
+      <ol><li><b>01</b><div><strong>Опишите задачу</strong><p>Выберите категорию или найдите нужную услугу через поиск.</p></div></li><li><b>02</b><div><strong>Сравните мастеров</strong><p>Посмотрите цены, фотографии работ и реальные отзывы.</p></div></li><li><b>03</b><div><strong>Договоритесь напрямую</strong><p>Свяжитесь с мастером и обсудите детали без посредников.</p></div></li></ol>
+    </section>
+
+    <section class="cta"><div><span>Вы профессиональный мастер?</span><h2>Расскажите о своих услугах<br>тысячам клиентов</h2><p>Создайте объявление бесплатно за несколько минут.</p></div><button class="open-form">Разместить объявление →</button></section>
+  </main>
+
+  <footer><a class="logo" href="#"><img src="логитип/логотип.png" alt="" /><span class="logo-name" role="img" aria-label="Шебер"></span></a><p>Сервис поиска мастеров для любых задач</p><small>© 2026 Шебер. Все права защищены.</small></footer>
+
+  <dialog id="listingDialog">
+    <form id="listingForm" method="dialog">
+      <button type="button" class="dialog-close" aria-label="Закрыть">×</button>
+      <span class="kicker">НОВОЕ ОБЪЯВЛЕНИЕ</span><h2>Расскажите о своих услугах</h2><p class="form-note">Заполните данные — объявление сразу появится в каталоге.</p>
+      <div class="form-grid">
+        <label>Ваше имя<input name="name" required placeholder="Например, Арман" /></label>
+        <label>Город<select name="city" required><option>Алматы</option><option>Астана</option><option>Шымкент</option><option>Караганда</option></select></label>
+        <label class="full">Название услуги<input name="title" required placeholder="Например, Сантехник с опытом" /></label>
+        <label>Категория<select name="category" required><option>Ремонт квартир</option><option>Сантехника</option><option>Электрика</option><option>Мебель</option><option>Техника</option><option>Авто</option></select></label>
+        <label>Цена от, ₸<input name="price" type="number" min="0" required placeholder="10000" /></label>
+        <label class="full">Описание<textarea name="description" required rows="4" placeholder="Опыт, виды работ, гарантия..."></textarea></label>
+        <label>Телефон<input name="phone" required placeholder="+7 700 000 00 00" /></label>
+        <label class="photo-upload">Фото работы
+          <input name="imageFile" id="imageFile" type="file" accept="image/jpeg,image/png,image/webp" />
+          <span class="upload-box"><b>＋ Выбрать фото</b><small>JPG, PNG или WEBP, до 2 МБ</small></span>
+          <img id="imagePreview" class="image-preview" alt="Предпросмотр фотографии" hidden />
+        </label>
+      </div>
+      <button class="submit-btn" type="submit">Опубликовать объявление</button>
+    </form>
+  </dialog>
+  <dialog id="authDialog" class="auth-dialog">
+    <div class="auth-shell">
+      <button type="button" class="dialog-close auth-close" aria-label="Закрыть">×</button>
+      <a class="logo auth-logo" href="#"><img src="логитип/логотип.png" alt="" /><span class="logo-name" role="img" aria-label="Шебер"></span></a>
+      <div class="auth-message" id="authMessage" hidden>Для использования этой функции войдите или зарегистрируйтесь</div>
+      <div class="auth-tabs"><button class="active" data-auth-tab="login">Вход</button><button data-auth-tab="register">Регистрация</button></div>
+      <form id="loginForm" class="auth-form">
+        <h2>С возвращением!</h2><p>Войдите, чтобы пользоваться всеми возможностями сервиса.</p>
+        <label>Телефон или email<input name="identifier" autocomplete="username" required placeholder="mail@example.com или +7 700..." /></label>
+        <label>Пароль<input name="password" type="password" autocomplete="current-password" required minlength="6" placeholder="Введите пароль" /></label>
+        <div class="form-error" id="loginError"></div><button class="submit-btn" type="submit">Войти</button>
+      </form>
+      <form id="registerForm" class="auth-form" hidden>
+        <h2>Создайте аккаунт</h2><p>Регистрация займёт меньше минуты.</p>
+        <label>Ваше имя<input name="name" autocomplete="name" required minlength="2" placeholder="Например, Арман" /></label>
+        <label>Телефон или email<input name="identifier" autocomplete="username" required placeholder="mail@example.com или +7 700..." /></label>
+        <label>Пароль<input name="password" type="password" autocomplete="new-password" required minlength="6" placeholder="Минимум 6 символов" /></label>
+        <label>Подтвердите пароль<input name="confirm" type="password" autocomplete="new-password" required minlength="6" placeholder="Повторите пароль" /></label>
+        <div class="form-error" id="registerError"></div><button class="submit-btn" type="submit">Зарегистрироваться</button>
+      </form>
+      <p class="security-note">Демонстрационная версия: данные хранятся только в этом браузере.</p>
+    </div>
+  </dialog>
+  <dialog id="detailsDialog" class="details-dialog">
+    <div class="details-shell">
+      <button type="button" class="dialog-close details-close" aria-label="Закрыть">×</button>
+      <div class="details-image"><img id="detailsImage" alt="Фото объявления" /></div>
+      <div class="details-content">
+        <div class="details-tags"><span id="detailsCategory"></span><span id="detailsCity"></span></div>
+        <h2 id="detailsTitle"></h2>
+        <div class="details-master"><span class="account-avatar" id="detailsAvatar"></span><div><small>Мастер</small><strong id="detailsName"></strong></div><span class="details-rating" id="detailsRating"></span></div>
+        <h3>Описание услуги</h3><p id="detailsDescription"></p>
+        <div class="details-bottom"><div><small>Стоимость работ</small><strong id="detailsPrice"></strong></div><button id="detailsPhone">Показать телефон</button></div>
+      </div>
+    </div>
+  </dialog>
+  <div class="toast" id="toast">Объявление опубликовано</div>
+  <script src="app.js"></script>
+</body>
+</html>

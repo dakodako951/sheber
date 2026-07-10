@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Объявление — Шебер</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="listing.css" />
+</head>
+<body class="listing-page">
+  <header class="listing-header">
+    <a class="logo" href="index.html"><img src="логитип/логотип.png" alt="" /><span class="logo-name" role="img" aria-label="Шебер"></span></a>
+    <a class="back-link" href="index.html">← Вернуться к объявлениям</a>
+  </header>
+  <main class="listing-main" id="listingMain" hidden>
+    <div class="breadcrumbs"><a href="index.html">Главная</a><span>›</span><span id="pageCategory"></span><span>›</span><b id="crumbTitle"></b></div>
+    <div class="listing-layout">
+      <section class="listing-primary">
+        <div class="listing-photo"><img id="pageImage" alt="Фото объявления" /></div>
+        <article class="listing-description"><h2>Описание</h2><p id="pageDescription"></p></article>
+      </section>
+      <aside class="listing-sidebar">
+        <div class="listing-info-card">
+          <div class="listing-location" id="pageCity"></div>
+          <h1 id="pageTitle"></h1>
+          <div class="listing-price" id="pagePrice"></div>
+          <button class="phone-button" id="pagePhone">Показать телефон</button>
+          <button class="favorite-button" id="pageFavorite">♡ Добавить в избранное</button>
+        </div>
+        <div class="seller-card">
+          <span class="seller-avatar" id="pageAvatar"></span>
+          <div><small>Мастер</small><strong id="pageName"></strong><span id="pageRating"></span></div>
+        </div>
+        <div class="safety-card"><b>Советы по безопасности</b><p>Не переводите предоплату незнакомым людям. Обсудите стоимость и условия работы заранее.</p></div>
+      </aside>
+    </div>
+  </main>
+  <div class="listing-missing" id="listingMissing" hidden><h1>Объявление не найдено</h1><a href="index.html">Вернуться в каталог</a></div>
+  <div class="toast" id="toast"></div>
+  <script src="listing.js"></script>
+</body>
+</html>
