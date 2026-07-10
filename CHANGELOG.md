@@ -20,4 +20,4 @@
 
 Это первый публичный демонстрационный релиз. Серверная часть и база данных пока не используются.
 
-[1.0.0]: https://github.com/dakodako951/-----------/releases/tag/v1.0.0
+[1.0.0]: https://github.com/dakodako951/sheber/releases/tag/v1.0.0
