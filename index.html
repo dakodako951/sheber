@@ -132,6 +132,20 @@
       </div>
     </div>
   </dialog>
+  <dialog id="editDialog" class="edit-dialog">
+    <form id="editForm">
+      <button type="button" class="dialog-close edit-close" aria-label="Закрыть">×</button>
+      <span class="kicker">РЕДАКТИРОВАНИЕ</span><h2>Изменить объявление</h2>
+      <div class="form-grid">
+        <label>Ваше имя<input name="name" required minlength="2" /></label><label>Город<select name="city" required><option>Алматы</option><option>Астана</option><option>Шымкент</option><option>Караганда</option></select></label>
+        <label class="full">Название услуги<input name="title" required /></label><label>Категория<select name="category" required><option>Ремонт квартир</option><option>Сантехника</option><option>Электрика</option><option>Мебель</option><option>Техника</option><option>Авто</option></select></label>
+        <label>Цена от, ₸<input name="price" type="number" min="0" required /></label><label class="full">Описание<textarea name="description" required rows="4"></textarea></label><label>Телефон<input name="phone" required /></label>
+        <label class="photo-upload">Новое фото<input name="editImageFile" id="editImageFile" type="file" accept="image/jpeg,image/png,image/webp" /><span class="upload-box"><b>＋ Выбрать новое фото</b><small>JPG, PNG или WEBP, до 2 МБ</small></span></label>
+        <div class="full edit-preview-wrap"><img id="editImagePreview" class="image-preview" alt="Фото объявления" /><label class="remove-photo"><input type="checkbox" name="removePhoto" /> Удалить фотографию</label></div>
+      </div>
+      <div class="edit-form-actions"><button type="button" class="cancel-edit">Отмена</button><button class="submit-btn" type="submit">Сохранить изменения</button></div>
+    </form>
+  </dialog>
   <div class="toast" id="toast">Объявление опубликовано</div>
   <script src="data.js"></script>
   <script src="app.js"></script>

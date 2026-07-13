@@ -32,6 +32,7 @@
           <div class="listing-price" id="pagePrice"></div>
           <button class="phone-button" id="pagePhone">Показать телефон</button>
           <button class="favorite-button" id="pageFavorite">♡ Добавить в избранное</button>
+          <button class="page-edit-button" id="pageEdit" hidden>Редактировать объявление</button>
         </div>
         <div class="seller-card">
           <span class="seller-avatar" id="pageAvatar"></span>
@@ -41,6 +42,8 @@
       </aside>
     </div>
   </main>
+  <dialog id="pageEditDialog" class="edit-dialog"><form id="pageEditForm"><button type="button" class="dialog-close page-edit-close">×</button><span class="kicker">РЕДАКТИРОВАНИЕ</span><h2>Изменить объявление</h2><div class="form-grid">
+    <label>Ваше имя<input name="name" required minlength="2" /></label><label>Город<select name="city"><option>Алматы</option><option>Астана</option><option>Шымкент</option><option>Караганда</option></select></label><label class="full">Название услуги<input name="title" required /></label><label>Категория<select name="category"><option>Ремонт квартир</option><option>Сантехника</option><option>Электрика</option><option>Мебель</option><option>Техника</option><option>Авто</option></select></label><label>Цена от, ₸<input name="price" type="number" min="0" required /></label><label class="full">Описание<textarea name="description" rows="4" required></textarea></label><label>Телефон<input name="phone" required /></label><label class="photo-upload">Новое фото<input name="imageFile" id="pageEditFile" type="file" accept="image/jpeg,image/png,image/webp" /><span class="upload-box"><b>＋ Выбрать новое фото</b><small>до 2 МБ</small></span></label><div class="full edit-preview-wrap"><img id="pageEditPreview" class="image-preview" alt="Фото"/><label class="remove-photo"><input name="removePhoto" type="checkbox"/> Удалить фотографию</label></div></div><div class="edit-form-actions"><button type="button" class="cancel-page-edit cancel-edit">Отмена</button><button class="submit-btn">Сохранить изменения</button></div></form></dialog>
   <div class="listing-missing" id="listingMissing" hidden><h1>Объявление не найдено</h1><a href="index.html">Вернуться в каталог</a></div>
   <div class="toast" id="toast"></div>
   <script src="data.js"></script>
