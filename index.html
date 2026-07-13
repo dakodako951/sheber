@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Шебер — мастера рядом</title>
   <meta name="description" content="Найдите проверенного мастера для ремонта или разместите своё объявление." />
+  <meta name="theme-color" content="#112b2d" />
+  <link rel="icon" type="image/png" href="логитип/логотип.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -12,7 +14,7 @@
 </head>
 <body>
   <header class="topbar">
-    <a class="logo" href="#" aria-label="Шебер — главная"><img src="логитип/логотип.png" alt="" /><span class="logo-name" role="img" aria-label="Шебер"></span></a>
+    <a class="logo" href="index.html" aria-label="Шебер — главная"><img src="логитип/логотип.png" alt="" width="51" height="51" /><span class="logo-name" role="img" aria-label="Шебер"></span></a>
     <nav>
       <a href="#catalog">Все мастера</a>
       <a href="#how">Как это работает</a>
@@ -40,7 +42,7 @@
       </div>
       <div class="hero-visual">
         <div class="shape"></div>
-        <img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&fit=crop&w=900&q=85" alt="Мастер за работой" />
+        <img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&fit=crop&w=900&q=85" alt="Мастер за работой" width="900" height="600" fetchpriority="high" />
         <div class="trust-card"><div class="avatars"><span>АМ</span><span>ДК</span><span>СВ</span></div><div><strong>4.9 из 5</strong><small>средняя оценка мастеров</small></div></div>
         <div class="verified-card">✓ Проверенные специалисты</div>
       </div>
@@ -71,7 +73,7 @@
     <section class="cta"><div><span>Вы профессиональный мастер?</span><h2>Расскажите о своих услугах<br>тысячам клиентов</h2><p>Создайте объявление бесплатно за несколько минут.</p></div><button class="open-form">Разместить объявление →</button></section>
   </main>
 
-  <footer><a class="logo" href="#"><img src="логитип/логотип.png" alt="" /><span class="logo-name" role="img" aria-label="Шебер"></span></a><p>Сервис поиска мастеров для любых задач</p><small>© 2026 Шебер. Все права защищены.</small></footer>
+  <footer><a class="logo" href="index.html"><img src="логитип/логотип.png" alt="" width="51" height="51" /><span class="logo-name" role="img" aria-label="Шебер"></span></a><p>Сервис поиска мастеров для любых задач</p><small>© 2026 Шебер. Все права защищены.</small></footer>
 
   <dialog id="listingDialog">
     <form id="listingForm" method="dialog">
@@ -97,7 +99,7 @@
   <dialog id="authDialog" class="auth-dialog">
     <div class="auth-shell">
       <button type="button" class="dialog-close auth-close" aria-label="Закрыть">×</button>
-      <a class="logo auth-logo" href="#"><img src="логитип/логотип.png" alt="" /><span class="logo-name" role="img" aria-label="Шебер"></span></a>
+      <a class="logo auth-logo" href="index.html"><img src="логитип/логотип.png" alt="" width="57" height="57" /><span class="logo-name" role="img" aria-label="Шебер"></span></a>
       <div class="auth-message" id="authMessage" hidden>Для использования этой функции войдите или зарегистрируйтесь</div>
       <div class="auth-tabs"><button class="active" data-auth-tab="login">Вход</button><button data-auth-tab="register">Регистрация</button></div>
       <form id="loginForm" class="auth-form">
@@ -131,6 +133,7 @@
     </div>
   </dialog>
   <div class="toast" id="toast">Объявление опубликовано</div>
+  <script src="data.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
