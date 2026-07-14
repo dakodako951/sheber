@@ -1,2 +1,9 @@
 *.zip
 *.exe
+node_modules/
+backend/.env
+cloudflared.log
+backend/*.db
+backend/*.db-shm
+backend/*.db-wal
+*.log

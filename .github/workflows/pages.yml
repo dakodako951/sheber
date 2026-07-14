@@ -28,7 +28,7 @@ jobs:
       - name: Подготовить статические файлы
         uses: actions/upload-pages-artifact@v4
         with:
-          path: .
+          path: frontend
       - name: Опубликовать сайт
         id: deployment
         uses: actions/deploy-pages@v4

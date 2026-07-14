@@ -104,17 +104,17 @@
       <div class="auth-tabs"><button class="active" data-auth-tab="login">Вход</button><button data-auth-tab="register">Регистрация</button></div>
       <form id="loginForm" class="auth-form">
         <h2>С возвращением!</h2><p>Войдите, чтобы пользоваться всеми возможностями сервиса.</p>
-        <label>Телефон или email<input name="identifier" autocomplete="username" required placeholder="mail@example.com или +7 700..." /></label>
+        <label>Email<input name="identifier" type="email" autocomplete="username" required placeholder="mail@example.com" /></label>
         <label>Пароль<input name="password" type="password" autocomplete="current-password" required minlength="6" placeholder="Введите пароль" /></label>
         <div class="form-error" id="loginError"></div><button class="submit-btn" type="submit">Войти</button>
       </form>
       <form id="registerForm" class="auth-form" hidden>
         <h2>Создайте аккаунт</h2><p>Регистрация займёт меньше минуты.</p>
         <label>Ваше имя<input name="name" autocomplete="name" required minlength="2" placeholder="Например, Арман" /></label>
-        <label>Телефон или email<input name="identifier" autocomplete="username" required placeholder="mail@example.com или +7 700..." /></label>
+        <label>Email<input name="identifier" type="email" autocomplete="username" required placeholder="mail@example.com" /></label>
         <label>Пароль<input name="password" type="password" autocomplete="new-password" required minlength="6" placeholder="Минимум 6 символов" /></label>
         <label>Подтвердите пароль<input name="confirm" type="password" autocomplete="new-password" required minlength="6" placeholder="Повторите пароль" /></label>
-        <div class="form-error" id="registerError"></div><button class="submit-btn" type="submit">Зарегистрироваться</button>
+        <div class="email-hint">После регистрации откройте письмо от Supabase и подтвердите email.</div><div class="form-error" id="registerError"></div><button class="submit-btn" type="submit">Зарегистрироваться</button>
       </form>
       <p class="security-note">Демонстрационная версия: данные хранятся только в этом браузере.</p>
     </div>
@@ -148,6 +148,6 @@
   </dialog>
   <div class="toast" id="toast">Объявление опубликовано</div>
   <script src="data.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="backend.js"></script><script src="app.js"></script>
+  <script src="backend.js"></script><script src="app.js"></script>
 </body>
 </html>
